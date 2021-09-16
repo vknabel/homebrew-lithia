@@ -5,19 +5,19 @@
 class Lithia < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.2/lithia_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "5a99adaf1a9eb7fa5b7838561b1613b7517f491fa12ddd3a6aba43d2711aa0f3"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.3/lithia_0.0.3_Darwin_x86_64.tar.gz"
+      sha256 "57a708c8774f35ae006037b3df44d459a767a30abbae42bb526eaf1380616dbb"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.2/lithia_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "a996749db792647f48bbb81c62cf97d7c8da4e57b4958c3d738de8a53cea1f16"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.3/lithia_0.0.3_Darwin_arm64.tar.gz"
+      sha256 "fd2e849bdb734854ed33af61b95d8f887c59631fc61b8817e5bce67bcb3bd62f"
     end
   end
 
