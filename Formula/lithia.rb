@@ -23,5 +23,6 @@ class Lithia < Formula
 
   def install
     bin.install "lithia"
+    prefix.install "./stdlib"
   end
 end
