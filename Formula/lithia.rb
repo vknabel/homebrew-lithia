@@ -12,16 +12,16 @@ class Lithia < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.1/go-lithia_0.0.1_Darwin_x86_64.tar.gz"
-      sha256 "563a11b00afbab40ad97ea4bc850995293abf0faa6d735a7bdd4f3598875e8e8"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.1/lithia_0.0.1_Darwin_x86_64.tar.gz"
+      sha256 "e4df6ab405025ece96e7f0c94dd82a66ac58570d88999d91bc59846117756ea4"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.1/go-lithia_0.0.1_Darwin_arm64.tar.gz"
-      sha256 "ca9496fd24ad8465a8be17554100f8b4d5a0c9247f872f0ec1eb663f7d16075f"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.1/lithia_0.0.1_Darwin_arm64.tar.gz"
+      sha256 "ffd6f64db785c1e682df9130c1a22bd8b8effe0dd0de445dc492db99ab092187"
     end
   end
 
   def install
-    bin.install "go-lithia"
+    bin.install "lithia"
   end
 end
