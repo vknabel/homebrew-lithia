@@ -5,19 +5,19 @@
 class Lithia < Formula
   desc ""
   homepage ""
-  version "0.0.1-next"
+  version "0.0.1"
   license "MIT"
   bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.0/go-lithia_0.0.1-next_Darwin_x86_64.tar.gz"
-      sha256 "e8f8c0ae1298006b0541348090e0540aa6f5c0c093fc0c1ca193b767d62d07f2"
+      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.1/go-lithia_0.0.1_Darwin_x86_64.tar.gz"
+      sha256 "563a11b00afbab40ad97ea4bc850995293abf0faa6d735a7bdd4f3598875e8e8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.0/go-lithia_0.0.1-next_Darwin_arm64.tar.gz"
-      sha256 "9b21aaa0f83ba82d46690ad682c930ecabacec0c10013a503c84a5537696ef7a"
+      url "https://github.com/vknabel/go-lithia/releases/download/v0.0.1/go-lithia_0.0.1_Darwin_arm64.tar.gz"
+      sha256 "ca9496fd24ad8465a8be17554100f8b4d5a0c9247f872f0ec1eb663f7d16075f"
     end
   end
 
