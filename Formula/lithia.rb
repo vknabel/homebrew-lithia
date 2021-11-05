@@ -5,24 +5,28 @@
 class Lithia < Formula
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
-  bottle :unneeded
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.8/lithia_0.0.8_Darwin_arm64.tar.gz"
-      sha256 "18f086a2941f50a5788ed6a022796c40b871f901d5ca32757d5042c9f6cae3d3"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.9/lithia_0.0.9_Darwin_arm64.tar.gz"
+      sha256 "04a9881e6fa5e19e678bf83e27dfa53293575cdbb2916e03056e0dd3fdba5424"
+
+      def install
+        bin.install "lithia"
+        prefix.install "./stdlib"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.8/lithia_0.0.8_Darwin_x86_64.tar.gz"
-      sha256 "97619acdb390714cd6213f6d5b03f61edf07214dbfecd65fd0f93979574726a9"
-    end
-  end
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.9/lithia_0.0.9_Darwin_x86_64.tar.gz"
+      sha256 "290489dd194bd296103c0425df9e0a99f0cb3f9a750772c235238d25d00ecb42"
 
-  def install
-    bin.install "lithia"
-    prefix.install "./stdlib"
+      def install
+        bin.install "lithia"
+        prefix.install "./stdlib"
+      end
+    end
   end
 end
