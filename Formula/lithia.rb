@@ -5,14 +5,13 @@
 class Lithia < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.0.11"
   license "MIT"
-  depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.10/lithia_0.0.10_Darwin_arm64.tar.gz"
-      sha256 "1c0b2c90ce1567b4a6fb393525bdd16bb58a7d4cdfa3f70578de4d303afdcfe6"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.11/lithia_0.0.11_Darwin_arm64.tar.gz"
+      sha256 "7892675c287367ae919f59ce24fa2a2252e2ddd99cddc01cd6c5b477c8842ff0"
 
       def install
         bin.install "lithia"
@@ -20,8 +19,29 @@ class Lithia < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.10/lithia_0.0.10_Darwin_x86_64.tar.gz"
-      sha256 "83ff02329cc20852e018221278a0eda37e61c5505dcdb9f6faf7d56ef0ee1b10"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.11/lithia_0.0.11_Darwin_x86_64.tar.gz"
+      sha256 "b288a7631453140bd6c78ac043705ed49255e6f20469f8f8ec0a263ce12ad5e1"
+
+      def install
+        bin.install "lithia"
+        prefix.install "./stdlib"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.11/lithia_0.0.11_Linux_arm64.tar.gz"
+      sha256 "6fd545534354c34aca09c5397b561e422f7d63215c9326937113e7a280b3b2a1"
+
+      def install
+        bin.install "lithia"
+        prefix.install "./stdlib"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.11/lithia_0.0.11_Linux_x86_64.tar.gz"
+      sha256 "dd2039a17a2635b540b0dab46a362b96f3173325d92102fa351d6c65bca4c34e"
 
       def install
         bin.install "lithia"
