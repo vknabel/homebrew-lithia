@@ -5,13 +5,13 @@
 class Lithia < Formula
   desc ""
   homepage ""
-  version "0.0.15"
+  version "0.0.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.15/lithia_0.0.15_Darwin_arm64.tar.gz"
-      sha256 "1b8618dd73182dbff898f56badd138b0328cfb9e23253b9563b7245bf68229c4"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.16/lithia_0.0.16_Darwin_arm64.tar.gz"
+      sha256 "44b70421e112a0a3dc8cae8b98021dd4959f6ec84611e8168b9b97a06bc8a648"
 
       def install
         bin.install "lithia"
@@ -19,8 +19,8 @@ class Lithia < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.15/lithia_0.0.15_Darwin_x86_64.tar.gz"
-      sha256 "95d0dde228ca6a0398d1b97a4f493798a36d7f20d233299d60dd5f463cf2681a"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.16/lithia_0.0.16_Darwin_x86_64.tar.gz"
+      sha256 "761b876011fbd490c986bc7a9b6ded06a92953aaa444aad0a9018d67b20cdf40"
 
       def install
         bin.install "lithia"
@@ -31,8 +31,8 @@ class Lithia < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.15/lithia_0.0.15_Linux_arm64.tar.gz"
-      sha256 "9df3bdea319758b129ef863f5cff66d6928d3eb39c923962e0c5f791d593849d"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.16/lithia_0.0.16_Linux_arm64.tar.gz"
+      sha256 "344f37f31c916387c072c202c33c8d9063747b659d4c229448e27bbd726f43fd"
 
       def install
         bin.install "lithia"
@@ -40,8 +40,8 @@ class Lithia < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vknabel/lithia/releases/download/v0.0.15/lithia_0.0.15_Linux_x86_64.tar.gz"
-      sha256 "c892f1b1a8aacaf504b17c9650c6ca3d5e77d23145f639b404263df3307dbb6d"
+      url "https://github.com/vknabel/lithia/releases/download/v0.0.16/lithia_0.0.16_Linux_x86_64.tar.gz"
+      sha256 "405faf255cc16c31f16fcd95cce93b083c106b289d381c38b09e8ab38bbf7c33"
 
       def install
         bin.install "lithia"
